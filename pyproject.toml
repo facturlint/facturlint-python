@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "facturlint"
+version = "0.2.0"
+description = "Official Python SDK & CLI for FacturLint — Factur-X 1.09.2, EN 16931 & BR-FR-CTC validation, PDF/A-3b envelope repair & audit API."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+authors = [
+    { name = "FacturLint", email = "contact@facturlint.com" },
+]
+maintainers = [
+    { name = "FacturLint", email = "contact@facturlint.com" },
+]
+keywords = [
+    "factur-x",
+    "en16931",
+    "br-fr-ctc",
+    "chorus-pro",
+    "facturation-electronique",
+    "pdfa3",
+    "pdfa3b",
+    "einvoicing",
+    "xml-cii",
+    "peppol",
+    "mcp",
+    "ai-agent",
+    "stateless-api",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Office/Business :: Financial :: Accounting",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.scripts]
+facturlint = "facturlint_sdk.cli:main"
+
+[project.urls]
+Homepage = "https://facturlint.com"
+Documentation = "https://facturlint.com/docs"
+"Error Catalog" = "https://facturlint.com/erreurs"
+"Pricing & API Keys" = "https://facturlint.com/#tarifs"
+"MCP Server" = "https://facturlint.com/mcp"
+Repository = "https://github.com/facturlint/facturlint-python"
+"Bug Tracker" = "https://github.com/facturlint/facturlint-python/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+facturlint_sdk = ["py.typed"]
